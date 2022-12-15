@@ -88,6 +88,7 @@ int main() {
     cout << "------2048------" << endl;
     cout << "Hi! Press any button to start the game or 'q' to exit" << endl;
     cin >> ch;
+    system("cls");
     if (ch == 'q') {
         exit(1);
     }
