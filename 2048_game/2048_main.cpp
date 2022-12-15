@@ -85,19 +85,16 @@ int main() {
     system("color B9");
     srand((unsigned)time(NULL));
     char ch, c;
-    cout << "------2048------" << endl;
-    cout << "Hi! Press any button to start the game or 'q' to exit" << endl;
-    cin >> ch;
-    if (ch == 'q') {
-        exit(1);
-    }
     //initialize board
     display();
     while (1) {
         if (is_win()) {
             cout << step << " steps" << endl;
             cout << "!!!YOU WIN!!!" << endl;
-            exit(1);
+            cout << "Continue? (y/n)" << endl;
+            cin >> c;
+            if (c == 'n')
+                exit(1);
         }
         if (game_over()) {
             cout << "~~~GAME OVER~~~" << endl;
